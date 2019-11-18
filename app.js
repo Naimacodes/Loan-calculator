@@ -39,6 +39,10 @@ function calculateResults(){
 }
 
 function showError(error){
+  document.querySelector("#results").style.display = "none";
+  document.querySelector("#loading").style.display = "none";
+
+
   const errorDiv = document.createElement('div');
   const card= document.querySelector('.card');
   const heading = document.querySelector('.heading')
@@ -47,7 +51,7 @@ function showError(error){
 
   card.insertBefore(errorDiv, heading);
 
-
+  
   setTimeout(clearError, 3000);
 }
 
